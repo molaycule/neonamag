@@ -1,0 +1,30 @@
+$white-color: #fff;
+$black-tint: rgba(0, 0, 0, 0.7);
+
+.showcase {
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient($black-tint, $black-tint),
+    url('../img/showcase-1.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .showcase-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 0 3rem;
+  }
+
+  h1 {
+    color: $white-color;
+    font-size: 6.4rem;
+  }
+
+  p {
+    color: $white-color;
+    font-size: 2.4rem;
+    width: 50%;
+  }
+}

@@ -1,0 +1,15 @@
+.navbar {
+  font-size: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+  text-align: center;
+
+  .nav-link {
+    margin: 0 1rem;
+    cursor: default;
+  }
+
+  /*.active {
+    border-bottom: 3px solid #ffcc99;
+  }*/
+}

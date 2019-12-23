@@ -1,0 +1,51 @@
+$peach-color: #ffcc99;
+$white-color: #fff;
+
+#about {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  
+  .about-left {
+    margin-right: 1.5rem;
+
+    img {
+      width: 175.5px;
+      height: 265px;
+    }
+  }
+
+  .about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 265px;
+    width: 50%;
+    margin-left: 1.5rem;
+
+    p {
+      font-size: 2.4rem;
+      width: 100%;
+    }
+
+    .btn {
+      height: 5rem;
+      width: 15rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .primary {
+      background-color: $peach-color;
+      color: $white-color;
+      margin-right: 5rem;
+      border: none;
+    }
+
+    .secondary {
+      background-color: $white-color;
+      color: $peach-color;
+      border: 1.5px solid $peach-color;
+    }
+  }
+}
