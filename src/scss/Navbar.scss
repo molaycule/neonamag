@@ -1,15 +1,47 @@
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
 .navbar {
   font-size: 2rem;
-  margin: 2rem 0;
   width: 100%;
   text-align: center;
+  background-color: #fff;
+  z-index: 1000;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+    img {
+      width: 80px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: -200px;
+      margin: 10px 50px;
+      transition: (all 0.75s ease-out);
+    }
 
-  .nav-link {
-    margin: 0 1rem;
-    cursor: default;
-  }
+    .show {
+      left: 0;
+    }
 
-  /*.active {
+    .nav-link {
+      margin: 0 1rem;
+      cursor: default;
+    }
+
+  .active {
     border-bottom: 3px solid #ffcc99;
-  }*/
+  }
 }

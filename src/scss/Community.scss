@@ -1,0 +1,161 @@
+$color: #f79d5c;
+$black-tint: rgba(0, 0, 0, 0.45);
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+#community {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  .community-content-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient($black-tint, $black-tint),
+      url('../img/showcase/showcase-6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    h1 {
+      font-family: 'Inria Serif', serif;
+      font-weight: 300;
+      font-size: 5.2rem;
+      text-align: center;
+      color: $color;
+    }
+  }
+
+  .community-content-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .container {
+      overflow: hidden;
+      width: 200px;
+      height: 200px;
+    }
+
+    .container:nth-child(1) .grid-content {
+      background: url('../img/community/1.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(1) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(2) .grid-content {
+      background: url('../img/community/2.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(2) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(3) .grid-content {
+      background: url('../img/community/3.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(3) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(4) .grid-content {
+      background: url('../img/community/4.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(4) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(5) .grid-content {
+      background: url('../img/community/5.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(5) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(6) .grid-content {
+      background: url('../img/community/6.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(6) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(7) .grid-content {
+      background: url('../img/community/7.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(7) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(8) .grid-content {
+      background: url('../img/community/8.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(8) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(9) .grid-content {
+      background: url('../img/community/9.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(9) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+
+    .container:nth-child(10) .grid-content {
+      background: url('../img/community/10.jpeg') no-repeat center center/cover;
+      height: 100%;
+      width: 100%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(10) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
+  }
+}

@@ -1,0 +1,61 @@
+$button-color: #F79D5C;
+$button-dark-color: rgb(241, 140, 68);
+$white-color: #fff;
+
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.btn {
+  height: 4rem;
+  width: 12rem;
+  font-size: 2rem;
+  font-family: 'Abel', sans-serif;
+  outline: none;
+  @include border-radius(5px);
+  @include transition(all 0.5s ease-in-out);
+}
+
+.btn-gap {
+  margin-right: 3rem;
+}
+
+.primary {
+  background: $button-color;
+  color: $white-color;
+  border: none;
+}
+
+.primary:hover {
+  background: $button-dark-color;
+  @include transform(scale(1.05));
+}
+
+.secondary {
+  background-color: transparent;
+  color: $button-color;
+  border: 1.5px solid $button-color;
+}
+
+.secondary:hover {
+  color: $button-dark-color;
+  border: 1.5px solid $button-dark-color;
+  @include transform(scale(1.05));
+}

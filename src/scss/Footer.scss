@@ -1,0 +1,124 @@
+$color: #F79D5C;
+$input-bg-color: #f2f2f2;
+
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}
+
+#footer {
+  margin-top: 2rem;
+
+  h1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Inria Serif', serif;
+    font-weight: 300;
+    font-size: 5.2rem;
+    color: $color;
+    margin-bottom: 1rem;
+  }
+
+  .footer-banner {
+    background-color: #333;
+    color: #ccc;
+    height: 50px;
+    margin-top: 2rem;
+    line-height: 50px;
+    text-align: center;
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    p:hover {
+      color: $color;
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+
+    .contact-form {
+      margin-right: 2.5rem;
+
+      form {
+        width: 30rem;
+
+        input, textarea {
+          display: block;
+          height: 4rem;
+          width: 100%;
+          margin: 1rem 0;
+          background-color: $input-bg-color;
+          @include border-radius(5px);
+          border: 1px solid $input-bg-color;
+          outline: none;
+          padding: 1rem;
+          font-family: 'Abel', sans-serif;
+          font-size: 1.6rem;
+        }
+
+        input:hover, textarea:hover {
+          border: 1px solid #F79D5C;
+        }
+
+        textarea {
+          height: 8rem;
+          resize: none;
+        }
+      }
+    }
+
+    .contact-infos {
+      margin-left: 2.5rem;
+
+      h3 {
+        font-size: 2.4rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+
+        .color-form-link {
+          text-decoration: none;
+          color: $color;
+        }
+
+        .color-form-link:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .info {
+        margin-bottom: 1rem;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        p {
+          display: inline;
+          font-size: 1.8rem;
+          margin-left: 1rem;
+        }
+
+        p:hover {
+          color: $color;
+        }
+      }
+
+      .connect {
+        p {
+          font-size: 2.4rem;
+          margin-top: 1rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

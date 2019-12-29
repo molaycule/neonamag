@@ -1,50 +1,79 @@
-$background-color: #f9f9f9;
 $black-tint: rgba(0, 0, 0, 0.45);
 $white-color: #fff;
 
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
 #fashion {
-  background-color: $background-color;
   text-align: center;
   margin-top: 5rem;
   padding: 2rem;
 
   .categories {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 2rem;
 
     .category {
       width: 250px;
       height: 250px;
+      line-height: 250px;
+      margin: 0 5rem;
       background-size: contain;
       background-position: center;
+      overflow: hidden;
+      position: relative;
 
-      .text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      p {
+        font-family: 'Inria Serif', serif;
+        font-weight: 300;
+        color: $white-color;
+        font-size: 3.2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .img {
+        @include transition(all 0.5s ease-in-out);
+      }
+
+      .img:hover {
+        @include transform(scale(1.1));
+      }
+
+      .category-img1, .category-img2, .category-img3 {
         width: 100%;
         height: 100%;
-
-        p {
-          color: $white-color;
-          font-size: 3.2rem;
-          font-weight: 800;
-        }
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
 
-    .category:nth-child(1) {
+    .category-img1 {
       background: linear-gradient($black-tint, $black-tint),
         url('../img/fashion-1.png');
     }
 
-    .category:nth-child(2) {
+    .category-img2 {
       background: linear-gradient($black-tint, $black-tint),
         url('../img/fashion-2.png');
     }
 
-    .category:nth-child(3) {
+    .category-img3 {
       background: linear-gradient($black-tint, $black-tint),
         url('../img/fashion-3.png');
     }
