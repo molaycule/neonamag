@@ -4,8 +4,8 @@ import '../scss/Lifestyle.scss';
 const Lifestyle = props => {
   return (
     <div id="lifestyle">
-      <div className="lifestyle-grid">
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+      <div className="lifestyle-showcase">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona x Keexs Video collaboration"
@@ -21,7 +21,7 @@ const Lifestyle = props => {
             <p>by Team Neona</p>
           </div>
         </div>
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona Vanity"
@@ -38,7 +38,7 @@ const Lifestyle = props => {
           </div>
         </div>
 
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona x Keexs Video collaboration"
@@ -54,7 +54,7 @@ const Lifestyle = props => {
             <p>by Team Neona</p>
           </div>
         </div>
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona Vanity"
@@ -71,7 +71,7 @@ const Lifestyle = props => {
           </div>
         </div>
 
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona x Keexs Video collaboration"
@@ -87,7 +87,7 @@ const Lifestyle = props => {
             <p>by Team Neona</p>
           </div>
         </div>
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona Vanity"
@@ -104,7 +104,7 @@ const Lifestyle = props => {
           </div>
         </div>
 
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona x Keexs Video collaboration"
@@ -120,7 +120,7 @@ const Lifestyle = props => {
             <p>by Team Neona</p>
           </div>
         </div>
-        <div className="lifestyle-grid-content" data-aos="fade-up">
+        <div className="lifestyle-showcase-container" data-aos="fade-up">
           <div className="lifestyle-showcase-header">
             <iframe
               title="Neona Vanity"

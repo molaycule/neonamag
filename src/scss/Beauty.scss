@@ -12,33 +12,28 @@
   transition: $value;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 250px);
-  height: 500px;
+@supports not (display: grid) {
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 
   .grid-content {
-    width: 100%;
-    height: 100%;
+    height: calc(100vw - 66vw);
+    width: 33.33%;
     overflow: hidden;
-  }
 
-  .grid-content:first-child {
-    grid-row: 1/3;
-  }
+    .img-content {
+      width: 100.5%;
+      height: 100.5%;
+      object-fit: cover;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-  .grid-content:nth-child(3) {
-    grid-row: 2/3;
-    grid-column: 2/3;
-  }
-
-  .grid-content:nth-child(4) {
-    grid-row: 1/3;
-  }
-
-  .grid-content:nth-child(5) {
-    grid-row: 1/2;
+    .img-content:hover {
+      @include transform(scale(1.1));
+    }
   }
 
   .grid-content:nth-child(6) {
@@ -46,14 +41,52 @@
     justify-content: center;
     align-items: center;
   }
+}
 
-  .img-content {
-    width: 100.5%;
-    height: 100.5%;
-    @include transition(all 0.5s ease-in-out);
-  }
+@supports (display: grid) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    height: 500px;
 
-  .img-content:hover {
-    @include transform(scale(1.1));
+    .grid-content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .grid-content:first-child {
+      grid-row: 1/3;
+    }
+
+    .grid-content:nth-child(3) {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+
+    .grid-content:nth-child(4) {
+      grid-row: 1/3;
+    }
+
+    .grid-content:nth-child(5) {
+      grid-row: 1/2;
+    }
+
+    .grid-content:nth-child(6) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .img-content {
+      width: 100.5%;
+      height: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .img-content:hover {
+      @include transform(scale(1.1));
+    }
   }
 }
