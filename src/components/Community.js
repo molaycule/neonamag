@@ -4,11 +4,11 @@ import '../scss/Community.scss';
 const Community = props => {
   return (
     <div id="community">
-      <div className="community-content-flex" data-aos="fade-right">
+      <div className="community-content-flex" data-aos="fade-up">
         <h1>Neona Colors</h1>
         <p>community is everything</p>
       </div>
-      <div className="community-content-grid" data-aos="fade-left">
+      <div className="community-content-grid" data-aos="fade-up">
         <div className="container">
           <a
             href="https://instagram.com/theadetoun?igshid=1unvzxg1o50x9"

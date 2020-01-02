@@ -92,9 +92,9 @@ $color: #ffcc99;
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: -200px;
+    right: 0;
     margin: 20px 30px;
-    transition: (all 0.75s ease-out);
+    visibility: hidden;
 
     .bar1,
     .bar2,
@@ -108,7 +108,7 @@ $color: #ffcc99;
   }
 
   .menu-bar-show {
-    right: 0;
+    visibility: visible;
   }
 
   .change .bar1 {
