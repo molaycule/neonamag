@@ -2,14 +2,10 @@ import React from 'react';
 import '../scss/Button.scss';
 
 const Button = props => {
-  const divStyle = {
-    display: 'inline'
-  }
-
   return (
-    <div className="btn-container" style={divStyle}>
+    <span className="btn-container">
       <button className={props.classes}>{props.text}</button>
-    </div>
+    </span>
   );
 };
 

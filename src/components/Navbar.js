@@ -13,25 +13,61 @@ class Navbar extends Component {
   }
 
   handleScroll() {
-    // if (this.elem && this.elem.offsetTop > this.state.startOffsetTop) {
-    //   this.elem.firstElementChild.classList.add('show');
+    // if (this.navbarElement && this.navbarElement.offsetTop > this.state.startOffsetTop) {
+    //   this.navbarElement.firstElementChild.classList.add('show');
     // } else {
-    //   this.elem.firstElementChild.classList.remove('show');
+    //   this.navbarElement.firstElementChild.classList.remove('show');
     // }
 
-    if (this.elem && window.scrollY >= this.state.startOffsetTop) {
-      this.elem.firstElementChild.classList.add('show');
-      this.elem.classList.add('fixed');
+    if (this.navbarElement.lastElementChild.classList.contains('change')) {
+      this.removeMobileNav();
+    }
+    
+    if (this.navbarElement && window.scrollY >= this.state.startOffsetTop) {
+      this.navbarElement.firstElementChild.classList.add('show');
+      this.navbarElement.classList.add('fixed');
+      if (document.documentElement.clientWidth <= 480) {
+        // mobile screen less than or equal to 480px
+        this.navbarElement.lastElementChild.classList.add('menu-bar-show');
+      }
     } else {
-      this.elem.firstElementChild.classList.remove('show');
-      this.elem.classList.remove('fixed');
+      this.navbarElement.firstElementChild.classList.remove('show');
+      this.navbarElement.classList.remove('fixed');
+      if (document.documentElement.clientWidth <= 480) {
+        // mobile screen less than or equal to 480px
+        this.navbarElement.lastElementChild.classList.remove('menu-bar-show');
+      }
+    }
+  }
+
+  toggleMenuIcon() {
+    console.log('p');
+    this.navbarElement.lastElementChild.classList.toggle('change');
+    if (this.navbarElement.lastElementChild.classList.contains('change')) {
+      if (document.documentElement.clientWidth <= 480) {
+        // mobile screen less than or equal to 480px
+        this.navbarElement.classList.add('mobile-nav');
+      }
+    } else {
+      if (document.documentElement.clientWidth <= 480) {
+        // mobile screen less than or equal to 480px
+        this.navbarElement.classList.remove('mobile-nav');
+      }
+    }
+  }
+
+  removeMobileNav() {
+    if (document.documentElement.clientWidth <= 480) {
+      // mobile screen less than or equal to 480px
+      this.navbarElement.classList.remove('mobile-nav');
+      this.navbarElement.lastElementChild.classList.toggle('change');
     }
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
     this.setState({
-      startOffsetTop: this.elem.offsetTop
+      startOffsetTop: this.navbarElement.offsetTop
     });
     window.addEventListener('scroll', this.handleScroll);
   }
@@ -47,7 +83,7 @@ class Navbar extends Component {
         data-aos="fade-in"
         data-aos-delay="500"
         ref={elem => {
-          this.elem = elem;
+          this.navbarElement = elem;
         }}
       >
         <img src={Logo} alt="Logo" />
@@ -60,6 +96,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             ABOUT
           </Link>
@@ -71,6 +110,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             FASHION
           </Link>
@@ -82,6 +124,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             LIFESTYLE
           </Link>
@@ -93,6 +138,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             REAL ESTATE
           </Link>
@@ -104,6 +152,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             BEAUTY
           </Link>
@@ -115,6 +166,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             FOOD
           </Link>
@@ -126,6 +180,9 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             COMMUNITY
           </Link>
@@ -137,9 +194,22 @@ class Navbar extends Component {
             offset={-60}
             duration={1000}
             className="nav-link"
+            onClick={() => {
+              this.removeMobileNav();
+            }}
           >
             PR
           </Link>
+        </div>
+        <div
+          className="menu-bar"
+          onClick={() => {
+            this.toggleMenuIcon();
+          }}
+        >
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
         </div>
       </div>
     );

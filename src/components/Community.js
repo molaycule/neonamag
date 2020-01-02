@@ -5,11 +5,8 @@ const Community = props => {
   return (
     <div id="community">
       <div className="community-content-flex" data-aos="fade-right">
-        <h1>
-          Neona
-          <br />
-          Colors
-        </h1>
+        <h1>Neona Colors</h1>
+        <p>community is everything</p>
       </div>
       <div className="community-content-grid" data-aos="fade-left">
         <div className="container">

@@ -1,4 +1,4 @@
-$color: #F79D5C;
+$color: #f79d5c;
 $input-bg-color: #f2f2f2;
 
 @mixin border-radius($value) {
@@ -49,7 +49,8 @@ $input-bg-color: #f2f2f2;
       form {
         width: 30rem;
 
-        input, textarea {
+        input,
+        textarea {
           display: block;
           height: 4rem;
           width: 100%;
@@ -63,8 +64,9 @@ $input-bg-color: #f2f2f2;
           font-size: 1.6rem;
         }
 
-        input:hover, textarea:hover {
-          border: 1px solid #F79D5C;
+        input:hover,
+        textarea:hover {
+          border: 1px solid #f79d5c;
         }
 
         textarea {
@@ -112,11 +114,63 @@ $input-bg-color: #f2f2f2;
         }
       }
 
-      .connect {
-        p {
-          font-size: 2.4rem;
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
+      .connect p {
+        font-size: 2.4rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #footer {
+    h1 {
+      font-size: 4rem;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contact-form {
+        margin-right: 0;
+        width: 90%;
+
+        form {
+          width: 100%;
+          .btn-container .btn {
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+
+      .contact-infos {
+        width: 90%;
+        margin-left: 0;
+
+        h3 {
+          font-size: 2rem;
+          margin-top: 2rem;
+        }
+
+        .info {
+          margin-bottom: 2rem;
+
+          p {
+            font-size: 2rem;
+          }
+
+          #second-num {
+            display: block;
+            margin-left: 3rem;
+          }
+        }
+
+        .connect p {
+          font-size: 2rem;
         }
       }
     }

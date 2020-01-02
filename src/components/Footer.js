@@ -57,7 +57,7 @@ class Footer extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p>+2348144485080</p>
+                <p id="second-num">+2348144485080</p>
               </a>
             </div>
             <div className="connect">

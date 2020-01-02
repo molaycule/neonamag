@@ -1,4 +1,4 @@
-$color: #F79D5C;
+$color: #f79d5c;
 
 #lifestyle {
   margin: 5rem 0;
@@ -14,7 +14,7 @@ $color: #F79D5C;
 
     .lifestyle-showcase-container {
       width: 320px;
-      box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
       padding: 3rem 0;
       margin: 2rem;
       transition: all 0.5s ease-in-out;
@@ -35,7 +35,7 @@ $color: #F79D5C;
         h5:hover {
           color: $color;
         }
-        
+
         p {
           font-size: 1.6rem;
           color: $color;
@@ -44,7 +44,23 @@ $color: #F79D5C;
     }
 
     .lifestyle-showcase-container:hover {
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #lifestyle {
+    margin: 0 0 5rem 0;
+
+    .lifestyle-showcase
+      .lifestyle-showcase-container
+      .lifestyle-showcase-header {
+      width: 100%;
+      iframe {
+        width: 100%;
+        margin: 0 auto;
+      }
     }
   }
 }

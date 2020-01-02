@@ -15,299 +15,171 @@ $black-tint: rgba(0, 0, 0, 0.45);
   transform: $property;
 }
 
-@supports not (display: grid) {
-  #community {
+#community {
+  .community-content-flex {
+    background: linear-gradient($black-tint, $black-tint),
+      url('../img/showcase/showcase-6.png') no-repeat center center/cover;
+    width: 100%;
+    height: calc(100vw / 3);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
-    .community-content-flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 50%;
-      background: linear-gradient($black-tint, $black-tint),
-        url('../img/showcase/showcase-6.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      h1 {
-        font-family: 'Inria Serif', serif;
-        font-weight: 300;
-        font-size: 5.2rem;
-        text-align: center;
-        color: $color;
-      }
+    h1 {
+      font-family: 'Inria Serif', serif;
+      font-weight: 300;
+      font-size: 5.2rem;
+      text-align: center;
+      color: $color;
     }
 
-    .community-content-grid {
-      display: flex;
-      flex-wrap: wrap;
+    p {
+      font-size: 3.4rem;
+      color: $color;
+    }
+  }
 
-      .container {
-        overflow: hidden;
-        width: 200px;
-        height: 200px;
-      }
+  .community-content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
 
-      .container:nth-child(1) .grid-content {
-        background: url('../img/community/1.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container {
+      overflow: hidden;
+      width: calc(100vw / 5);
+      height: calc(100vw / 5);
+    }
 
-      .container:nth-child(1) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(1) .grid-content {
+      background: url('../img/community/1.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(2) .grid-content {
-        background: url('../img/community/2.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(1) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(2) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(2) .grid-content {
+      background: url('../img/community/2.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(3) .grid-content {
-        background: url('../img/community/3.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(2) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(3) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(3) .grid-content {
+      background: url('../img/community/3.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(4) .grid-content {
-        background: url('../img/community/4.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(3) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(4) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(4) .grid-content {
+      background: url('../img/community/4.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(5) .grid-content {
-        background: url('../img/community/5.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(4) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(5) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(5) .grid-content {
+      background: url('../img/community/5.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(6) .grid-content {
-        background: url('../img/community/6.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(5) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(6) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(6) .grid-content {
+      background: url('../img/community/6.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(7) .grid-content {
-        background: url('../img/community/7.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(6) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(7) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(7) .grid-content {
+      background: url('../img/community/7.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(8) .grid-content {
-        background: url('../img/community/8.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(7) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(8) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(8) .grid-content {
+      background: url('../img/community/8.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(9) .grid-content {
-        background: url('../img/community/9.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(8) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(9) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(9) .grid-content {
+      background: url('../img/community/9.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
 
-      .container:nth-child(10) .grid-content {
-        background: url('../img/community/10.jpeg') no-repeat center
-          center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
+    .container:nth-child(9) .grid-content:hover {
+      @include transform(scale(1.1));
+    }
 
-      .container:nth-child(10) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .container:nth-child(10) .grid-content {
+      background: url('../img/community/10.jpeg') no-repeat center center/cover;
+      height: 100.5%;
+      width: 100.5%;
+      @include transition(all 0.5s ease-in-out);
+    }
+
+    .container:nth-child(10) .grid-content:hover {
+      @include transform(scale(1.1));
     }
   }
 }
 
-@supports (display: grid) {
+@media only screen and (max-width: 480px) {
   #community {
-    display: grid;
-    grid-template-columns: 1fr auto;
-
     .community-content-flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient($black-tint, $black-tint),
-        url('../img/showcase/showcase-6.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      height: calc(100vw / 2);
 
       h1 {
-        font-family: 'Inria Serif', serif;
-        font-weight: 300;
-        font-size: 5.2rem;
-        text-align: center;
-        color: $color;
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2.6rem;
       }
     }
 
-    .community-content-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-
-      .container {
-        overflow: hidden;
-        width: 200px;
-        height: 200px;
-      }
-
-      .container:nth-child(1) .grid-content {
-        background: url('../img/community/1.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(1) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(2) .grid-content {
-        background: url('../img/community/2.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(2) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(3) .grid-content {
-        background: url('../img/community/3.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(3) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(4) .grid-content {
-        background: url('../img/community/4.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(4) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(5) .grid-content {
-        background: url('../img/community/5.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(5) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(6) .grid-content {
-        background: url('../img/community/6.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(6) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(7) .grid-content {
-        background: url('../img/community/7.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(7) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(8) .grid-content {
-        background: url('../img/community/8.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(8) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(9) .grid-content {
-        background: url('../img/community/9.jpeg') no-repeat center center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(9) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
-
-      .container:nth-child(10) .grid-content {
-        background: url('../img/community/10.jpeg') no-repeat center
-          center/cover;
-        height: 100%;
-        width: 100%;
-        @include transition(all 0.5s ease-in-out);
-      }
-
-      .container:nth-child(10) .grid-content:hover {
-        @include transform(scale(1.1));
-      }
+    .community-content-grid .container {
+      width: calc(100vw / 2);
+      height: calc(100vw / 2);
     }
   }
 }

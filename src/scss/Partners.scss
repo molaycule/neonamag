@@ -3,137 +3,80 @@ $color: #f79d5c;
 #pr {
   margin-top: 2rem;
 
-  @supports not (display: grid) {
-    .pr-content-grid {
-      display: flex;
-      width: 37%;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      justify-content: space-around;
+  .pr-content-grid {
+    display: flex;
+    width: 37%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-      .grid-content:nth-child(1) {
-        background: url('../img/partners/1.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(2) {
-        background: url('../img/partners/2.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(3) {
-        background: url('../img/partners/3.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(4) {
-        background: url('../img/partners/4.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(5) {
-        background: url('../img/partners/5.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(6) {
-        background: url('../img/partners/6.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(7) {
-        background: url('../img/partners/7.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(8) {
-        background: url('../img/partners/8.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
+    .grid-content:nth-child(1) {
+      background: url('../img/partners/1.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
     }
 
-    h1 {
-      font-family: 'Inria Serif', serif;
-      font-weight: 300;
-      font-size: 5.2rem;
-      text-align: center;
-      color: $color;
-      margin-bottom: 2rem;
+    .grid-content:nth-child(2) {
+      background: url('../img/partners/2.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
+    }
+
+    .grid-content:nth-child(3) {
+      background: url('../img/partners/3.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
+    }
+
+    .grid-content:nth-child(4) {
+      background: url('../img/partners/4.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
+    }
+
+    .grid-content:nth-child(5) {
+      background: url('../img/partners/5.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
+    }
+
+    .grid-content:nth-child(6) {
+      background: url('../img/partners/6.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
+    }
+
+    .grid-content:nth-child(7) {
+      background: url('../img/partners/7.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
+    }
+
+    .grid-content:nth-child(8) {
+      background: url('../img/partners/8.jpeg') no-repeat center center/cover;
+      height: 100px;
+      width: 100px;
     }
   }
 
-  @supports (display: grid) {
-    .pr-content-grid {
-      display: grid;
-      width: 40%;
-      margin: 0 auto;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1rem;
+  h1 {
+    font-family: 'Inria Serif', serif;
+    font-weight: 300;
+    font-size: 5.2rem;
+    text-align: center;
+    color: $color;
+    margin-bottom: 2rem;
+  }
+}
 
-      .grid-content:nth-child(1) {
-        background: url('../img/partners/1.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(2) {
-        background: url('../img/partners/2.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(3) {
-        background: url('../img/partners/3.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(4) {
-        background: url('../img/partners/4.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(5) {
-        background: url('../img/partners/5.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(6) {
-        background: url('../img/partners/6.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(7) {
-        background: url('../img/partners/7.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-
-      .grid-content:nth-child(8) {
-        background: url('../img/partners/8.jpeg') no-repeat center center/cover;
-        height: 100px;
-        width: 100px;
-      }
-    }
-
+@media only screen and (max-width: 480px) {
+  #pr {
     h1 {
-      font-family: 'Inria Serif', serif;
-      font-weight: 300;
-      font-size: 5.2rem;
-      text-align: center;
-      color: $color;
-      margin-bottom: 2rem;
+      font-size: 4rem;
+    }
+    
+    .pr-content-grid {
+      width: 70%;
     }
   }
 }

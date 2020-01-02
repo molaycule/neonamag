@@ -1,3 +1,5 @@
+$color: #ffcc99;
+
 @mixin transition($value) {
   -webkit-transition: $value;
   -moz-transition: $value;
@@ -21,27 +23,105 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  
-    img {
-      width: 80px;
-      height: 40px;
-      position: absolute;
-      top: 0;
-      left: -200px;
-      margin: 10px 50px;
-      transition: (all 0.75s ease-out);
-    }
 
-    .show {
-      left: 0;
+  img {
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    margin: 10px 50px;
+    transition: (all 0.75s ease-out);
+  }
+
+  .show {
+    left: 0;
+  }
+
+  .nav-link {
+    margin: 0 1rem;
+    cursor: default;
+  }
+
+  .active {
+    border-bottom: 3px solid $color;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 2rem 2rem 0 2rem;
+    height: 80px;
+    align-items: flex-end;
+
+    img {
+      margin: 20px 30px;
     }
 
     .nav-link {
-      margin: 0 1rem;
-      cursor: default;
+      margin: 0 0.5rem;
+      font-size: 1.8rem;
     }
+  }
 
-  .active {
-    border-bottom: 3px solid #ffcc99;
+  .navbar.fixed {
+    .nav-link {
+      visibility: hidden;
+    }
+  }
+
+  .navbar.fixed.mobile-nav {
+    height: 100vh;
+    align-items: center;
+
+    .nav-link {
+      display: block;
+      margin: 1rem 0;
+      font-size: 2.4rem;
+      visibility: visible;
+    }
+  
+    .active {
+      color: $color;
+      border-bottom: 0px;
+    }
+  }
+
+  .menu-bar {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    margin: 20px 30px;
+    transition: (all 0.75s ease-out);
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
+
+  .menu-bar-show {
+    right: 0;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }
